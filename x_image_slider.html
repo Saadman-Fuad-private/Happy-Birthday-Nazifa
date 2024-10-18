@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nazifa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -162,27 +162,23 @@
 
         
     </div>
-    <!-- <div><p><span>So many memories, where should we start from?</span> <span>Well, lets start from the 1st day</span></p></div> -->
 
     <div style=" padding-top: 2%; display:flex; display:inline-flex; padding-left: 1%;">
-      <!-- <div style="padding: 10px;"><p><span>So many memories, where should we start from?</span> <span>Well, lets start from the 1st day</span></p></div> -->
 
       <a href="index.html"><button class="big-cta-btn">Previous</button></a>
       <a href="x_1.html"><button class="big-cta-btn">Next</button></a>
     </div>
     <div class="text-color-1" style=" background-color: rgba(255, 255, 255, 0.1); padding-left: 1%; padding: 10px;"><p><span>So many memories, where should we start from?</span> <span>Well, lets start from the 1st day</span></p></div>
 
-    <!-- <div><p><span>So many memories, where should we start from?</span> <span>Well, lets start from the 1st day</span></p></div> -->
 
     
-    <!-- Load GSAP library from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
     <script>
         let xPos = 0;
 
         gsap.timeline()
-            .set('.ring', { rotationY: 180, cursor: 'grab' }) // set initial rotationY so the parallax jump happens off-screen
-            .set('.img', { // apply transform rotations to each image
+            .set('.ring', { rotationY: 180, cursor: 'grab' }) 
+            .set('.img', { 
                 rotateY: (i) => i * -36,
                 transformOrigin: '50% 50% 500px',
                 z: -500,
@@ -240,7 +236,7 @@
             gsap.set('.ring', { cursor: 'grab' });
         }
 
-        function getBgPos(i) { //returns the background-position string to create parallax movement in each image
+        function getBgPos(i) { 
             return (100 - gsap.utils.wrap(0, 360, gsap.getProperty('.ring', 'rotationY') - 180 - i * 36) / 360 * 500) + 'px 0px';
         }
     </script>
